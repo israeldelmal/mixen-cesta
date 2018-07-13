@@ -80,6 +80,8 @@ $(function() {
 
 	let Figure = $('body > section:nth-of-type(3) > section > div:last-of-type > figure');
 
+	let Quote = $('body > section:nth-of-type(3) > section > div:last-of-type > blockquote');
+
 	Btn1.on('click', function(event) {
 		event.preventDefault();
 
@@ -91,6 +93,7 @@ $(function() {
 		if (Figure.is(':visible')) {
 			Figure.fadeOut(300, function() {
 				Image.fadeIn(300);
+				Quote.fadeIn(300);
 			});
 		}
 
@@ -122,6 +125,7 @@ $(function() {
 		Btn4.removeClass('service-btn-active');
 
 		if (Image.is(':visible')) {
+			Quote.fadeOut(300);
 			Image.fadeOut(300, function() {
 				Figure.fadeIn(300);
 			});
@@ -157,6 +161,7 @@ $(function() {
 		if (Figure.is(':visible')) {
 			Figure.fadeOut(300, function() {
 				Image.fadeIn(300);
+				Quote.fadeIn(300);
 			});
 		}
 
@@ -190,6 +195,7 @@ $(function() {
 		if (Figure.is(':visible')) {
 			Figure.fadeOut(300, function() {
 				Image.fadeIn(300);
+				Quote.fadeIn(300);
 			});
 		}
 
