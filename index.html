@@ -2,30 +2,58 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>CestA | Comunicación Estratégica Aplicada</title>
 	<link rel="icon" type="image/png" href="assets/images/icon.png">
 	<link rel="stylesheet" href="assets/css/main.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 </head>
 <body>
-	<!-- Navegación -->
+	<!-- Navigation -->
 	<nav>
 		<section>
-			<a href="#" id="home">
+			<a class="item-nav" href="#home">
 				<img src="assets/images/logotipo.png" alt="Logotipo CestA">
 			</a>
 		</section>
 		<section>
 			<ul>
-				<li><a href="#about">About</a></li>
-				<li><a href="#services">Services</a></li>
-				<li><a href="#clients">Clients</a></li>
-				<li><a href="#contact">Contact</a></li>
+				<li><a class="item-nav" href="#about">About</a></li>
+				<li><a class="item-nav" href="#services">Services</a></li>
+				<li><a class="item-nav" href="#clients">Clients</a></li>
+				<li><a class="item-nav" href="#contact">Contact</a></li>
 			</ul>
 		</section>
 	</nav>
-	<!-- Cabecera -->
-	<header>
+	<!-- Menu -->
+	<menu style="display: none;">
+		<div>
+			<ul>
+				<li>
+					<a class="item-menu" href="#about">
+						<img src="assets/images/isologo.png"> About
+					</a>
+				</li>
+				<li>
+					<a class="item-menu" href="#services">
+						<img src="assets/images/isologo.png"> Services
+					</a>
+				</li>
+				<li>
+					<a class="item-menu" href="#clients">
+						<img src="assets/images/isologo.png"> Clients
+					</a>
+				</li>
+				<li>
+					<a class="item-menu" href="#contact">
+						<img src="assets/images/isologo.png"> Contact
+					</a>
+				</li>
+			</ul>
+		</div>
+	</menu>
+	<!-- Header -->
+	<header id="home">
 		<nav>
 			<div>
 				<img src="assets/images/isologo.png" alt="Isologo CestA">
@@ -36,32 +64,6 @@
 				</button>
 			</div>
 		</nav>
-		<menu style="display: none;">
-			<div>
-				<ul>
-					<li>
-						<a href="#">
-							<img src="assets/images/isologo.png"> About
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<img src="assets/images/isologo.png"> Services
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<img src="assets/images/isologo.png"> Clients
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<img src="assets/images/isologo.png"> Contact
-						</a>
-					</li>
-				</ul>
-			</div>
-		</menu>
 		<main>
 			<h1>Comunicación
 			estratégica <strong>aplicada</strong></h1>
@@ -71,7 +73,7 @@
 			</h2>
 		</main>
 	</header>
-	<!-- Nosotros -->
+	<!-- About -->
 	<section id="about">
 		<div>
 			<figure>
@@ -80,7 +82,7 @@
 			</figure>
 			<section>
 				<h3>About</h3>
-				<div>
+				<div id="AboutContent1">
 					<p>We provide consultancy based on S-CAN® our own scientific model 
 					that helps you develop the mindset needed for assertive strategic 
 					decision making and precisely for innovation.</p>
@@ -91,7 +93,7 @@
 					how the vehicle of communication arises strategy, leading you 
 					to innovation.</p>
 				</div>
-				<div>
+				<div id="AboutContent2">
 					<p>Innovation never comes out of recipes. The established strategy “know 
 					how” initiated by Michael Porter and others, or the recent “Big Data” 
 					processing capacity (www.quid.com) though valuable, fall short of the 
@@ -105,8 +107,8 @@
 				</div>
 				<footer>
 					<div>
-						<button></button>
-						<button></button>
+						<button class="about-active-button" id="AboutBtn1"></button>
+						<button id="AboutBtn2"></button>
 					</div>
 					<button>Contact Us</button>
 				</footer>
@@ -123,8 +125,137 @@
 			<p>Yayoi Kusama "Infinity Mirrored Room - The Souls of Millions of Light Years Away" 2013.</p>
 		</footer>
 	</section>
+	<!-- Services -->
+	<section id="services">
+		<header>
+			<h3>Services</h3>
+			<sub>We help you reach beyond the best of your business and ideas.</sub>
+		</header>
+		<section>
+			<div>
+				<menu>
+					<a href="#">Consulting</a>
+					<a href="#" class="service-btn-active">Courses</a>
+					<a href="#">Certification</a>
+					<a href="#">Coaching</a>
+				</menu>
+				<div>
+					<h4>Consulting</h4>
+					<p>In effective analysis sessions, under a strict and time unlimited  
+					confidentiality agreement, the potential of your assets (from ideas, 
+					infrastructure to human talent) will emerge as we travel on S-CAN®. 
+					The resolution of challenges will take a simple path, because if the 
+					solution is not simple, it is not a solution.</p>
+					<p>Furthermore, our aspiring expertise resides on bringing you ahead, 
+					to the edge where innovation is laid and glows.</p>
+				</div>
+				<div>
+					<h4>Courses</h4>
+					<p>Learn the pillars of S-CAN®. Learn a new language, the language of 
+					strategy and fundamental thinking.</p>
+					<p><strong>Basic</strong> – Introduction to S-CAN® –  5 hours; Three phases in one session.
+					<strong>Advanced</strong> – S-CAN® and CestA® – Exercises of fundamental thinking. 
+					From history to robotics and disruption to new social relations. – 16 hours; 
+					Three phases in four sessions, two days.
+					<strong>Intensive</strong> – Mastering S-CAN® and CestA® – 45 hours; Three phases in 
+					eight sessions during six days.
+					<strong>Locations:</strong> Palo Alto, CA. Houston, Tx. USA. Mexico City, Mexico. 
+					Munich, Germany. Varsaw, Poland.</p>
+					<p></p>
+				</div>
+				<div>
+					<h4>Certification</h4>
+					<p>In a personal one on one intensive exercise of applying S-CAN® to a 
+					specific challenge/opportunity case of the participant’s interest,  and 
+					under a strict timeless limited confidentiality agreement, an official 
+					certification would be awarded acknowledging the participant’s masterly 
+					dominance of the model.</p>
+					<p>By applying S-CAN®  a leader can achieve a specific business 
+					development and/or generate innovation.
+					Consultants have the option to  enhance his/her advice spectrum  
+					through the S-CAN® model implementation.</p>
+				</div>
+				<div>
+					<h4>Coaching</h4>
+					<p>We will challenge you to the best of your potential and beyond. 
+					You will enjoy to dominate the language of strategy.</p>
+					<p>Focus, control, speed, embrace risks and opportunities, 
+					broaden your perspective, develop your own technology…
+					disrupt, innovate and create.</p>
+				</div>
+			</div>
+			<div>
+				<figure>
+					<img src="assets/images/services/figure-1.png" alt="© S. Aulig Universität Paderborn, © Wuerfeldraht mit Seifenblasen und Drahttetraeder und Seifenblase, © GRAPE Minimal Surface Library">
+					<blockquote>Images: www.einstein-online.info/spotlights/soap_bubbles 
+					© S. Aulig Universität Paderborn, © Wuerfeldraht mit Seifenblasen und 
+					Drahttetraeder und Seifenblase, © GRAPE Minimal Surface Library</blockquote>
+				</figure>
+				<img src="assets/images/services/figure-2.jpg">
+			</div>
+		</section>
+	</section>
+	<section>
+		<h3><strong>Fundamental thinking is</strong>
+		strategic thinking ®</h3>
+	</section>
+	<!-- Clients -->
+	<section id="clients">
+		<img src="assets/images/clients/figure-1.png">
+		<section>
+			<div>
+				<h3>Clients</h3>
+				<p>Urban Development, Media, Health, Mining, Insurance, Financial Services, State and Federal Government</p>           
+				<p>Started in Germany in 1998 CestA helped, among others, a Köln based B2B reverse auction web 
+				platform to reorient their business plan, which allow it to avoid bankruptcy, obtain big clients and get 
+				acquired by an important investment group from London shortly thereafter.
+				From a major traditional film and television production company in Potsdam, that reduced its costs 30 
+				percent, as a result of few reunions with CestA, to a multinational mining enterprise where a process 
+				was re organized saving time and millions; many other organizations and leaders in both, private and 
+				public sectors in Europe and America, have taken benefit of our advice.</p>
+				<p>We honor the confidentiality of our clients.</p>
+				<button>Contact us</button>
+			</div>
+			<img src="assets/images/clients/figure-2.jpg" alt="Clients">
+		</section>
+	</section>
+	<section>
+		<h3><strong>Time relativity resides on the decision maker®</strong>
+		Think first, then develop®</h3>
+	</section>
+	<!-- Footer -->
+	<footer id="contact">
+		<section>
+			<div>
+				<h3>Contact us</h3>
+				<ul>
+					<li>
+						<span>CestA</span>
+						<span>AS-Thinking</span>
+					</li>
+					<li>
+						<a href="mailto:calmeida@cesta.mx">calmeida@cesta.mx</a>
+					</li>
+					<li>
+						<a href="mailto:calmeida@as-thinking.com">calmeida@as-thinking.com</a>
+					</li>
+					<li>+52(614)423 4713</li>
+					<li>+52(614)130 0650</li>
+					<li>México. 31213</li>
+				</ul>
+			</div>
+			<div>
+				<img src="assets/images/isologo.png" alt="Isologo CestA">
+			</div>
+			<div></div>
+		</section>
+		<footer>
+			Todos los derechos reservados &copy; | <strong>Made by:</strong> <a href="http://mixen.mx" target="_blank"><img src="http://mixen.mx/firma/logo-new.png" alt="Logotipo Mixen"></a>
+		</footer>
+	</footer>
 	<!-- JavaScript -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="assets/js/parallax.js"></script>
 	<script src="assets/js/main.js"></script>
 </body>
 </html>
