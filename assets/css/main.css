@@ -29,6 +29,52 @@ img {
 	pointer-events: none;
 }
 
+	body > button {
+		display         : none;
+		width           : 32px;
+		background-color: transparent;
+		border          : none;
+		position        : fixed;
+		top             : 32px;
+		left            : 32px;
+		z-index         : 30000;
+	}
+
+		body > button > span {
+			display      : block;
+			width        : 32px;
+			height       : 2px;
+			margin-bottom: 4px;
+			transition   : all 0.3s;
+		}
+
+		body > button > span:nth-of-type(1) {
+			background-color: rgb(50, 63, 212);
+		}
+
+		.active-span:nth-of-type(1) {
+			background-color: rgb(248, 49, 41);
+			margin-bottom: 8px;
+		}
+
+		body > button > span:nth-of-type(2) {
+			background-color: rgb(210, 12, 245);
+		}
+
+		.active-span:nth-of-type(2) {
+			background-color: rgb(218, 215, 0);
+			margin-bottom: 8px;
+		}
+
+		body > button > span:nth-of-type(3) {
+			background-color: rgb(254, 175, 42);
+			margin-bottom   : 0px;
+		}
+
+		.active-span:nth-of-type(3) {
+			background-color: rgb(63, 212, 0);
+		}
+
 	body > nav {
 		width           : 100%;
 		height          : 75px;
@@ -328,7 +374,8 @@ img {
 							background-color: rgb(67, 82, 164) !important;
 						}
 
-					body > section:first-of-type > div > section > footer > button {
+					body > section:first-of-type > div > section > footer > a {
+						display         : inline-block;
 						background-color: transparent;
 						border          : 1px solid rgb(67, 82, 164);
 						padding         : 4px 8px;
@@ -338,6 +385,13 @@ img {
 						text-transform  : uppercase;
 						color           : rgb(67, 82, 164);
 						cursor          : pointer;
+						text-decoration : none;
+						transition      : all 0.3s ease-out;
+					}
+
+					body > section:first-of-type > div > section > footer > a:hover {
+						color           : rgb(255, 255, 255);
+						background-color: rgb(67, 82, 164);
 					}
 
 	body > section:nth-of-type(2) {
@@ -574,7 +628,8 @@ img {
 					font-style: italic;
 				}
 
-				body > section:nth-of-type(5) > section > div > button {
+				body > section:nth-of-type(5) > section > div > a {
+					display         : inline-block;
 					cursor          : pointer;
 					background-color: transparent;
 					border          : 1px solid rgb(67, 82, 164);
@@ -583,6 +638,7 @@ img {
 					font-weight     : 400;
 					text-transform  : uppercase;
 					font-size       : 0.85em;
+					text-decoration : none;
 				}
 
 			body > section:nth-of-type(5) > section > img {
@@ -678,154 +734,370 @@ img {
 				font-weight: 400;
 			}
 
-@media all and (orientation: landscape) and (max-width: 1030px) {
-	body > nav {
-		display: none;
+@media screen and (max-width: 1280px) {
+	body > menu > div > ul {
+		list-style  : none;
+		position    : absolute;
+		right       : 0;
+		margin-right: 180px;
+		margin-top  : -140px;
+		z-index     : 1000
 	}
 
-	body > menu {
-		height          : 100vh;
-		background-color: rgb(236, 236, 236);
-		position        : fixed;
-		z-index         : 500;
-		display         : flex;
-		align-items     : center;
-		justify-content : center;
-	}
-
-		body > menu > div {
-			width   : 80%;
-			position: absolute;
-			z-index : 1000
+		body > menu > div > ul > li > a {
+			font-size: 2em;
 		}
 
-			body > menu > div > ul {
-				list-style  : none;
-				position    : absolute;
-				right       : 0;
-				margin-right: 300px;
-				margin-top  : -140px;
-				z-index     : 1000
-			}
-
-				body > menu > div > ul > li {
-					margin-bottom: 16px;
-				}
-
-				body > menu > div > ul > li:last-of-type {
-					margin-bottom: 0px
-				}
-
-					body > menu > div > ul > li > a {
-						font-size      : 2.5em;
-						text-decoration: none;
-						text-transform : uppercase;
-						color          : rgb(0, 0, 0);
-						display        : flex;
-						align-items    : center;
-					}
-
-						body > menu > div > ul > li > a > img {
-							display     : inline-block;
-							height      : 0.85em;
-							margin-right: 16px;
-						}
-
-	body > header {
-		width                : 100%;
-		height               : 100vh;
-		background-color     : rgb(236, 236, 236);
-		background-image     : url('../images/header/bg.jpg');
-		background-repeat    : no-repeat;
-		background-size      : cover;
-		background-attachment: fixed;
-		position             : relative;
-		display              : flex;
-		align-items          : center;
-		overflow             : hidden;
+	body > header > nav {
+		height: 200px;
 	}
 
-		body > header > nav {
-			width          : 100%;
-			height         : 300px;
-			margin         : auto;
-			position       : absolute;
-			display        : flex;
-			justify-content: center;
-			align-items    : center;
-			top            : 0;
-			z-index        : 50;
+		body > header > nav > div > img {
+			display: block;
+			height : 150px;
 		}
 
-			body > header > nav > div {
-				width          : 80%;
-				margin         : auto;
-				display        : flex;
-				flex-flow      : row wrap;
-				justify-content: space-between;
-			}
-
-				body > header > nav > div > button {
-					width           : 32px;
-					border          : none;
-					background-color: transparent;
-					margin-right    : 400px;
-					cursor          : pointer;
-				}
-
-					body > header > nav > div > button > span {
-						display         : block;
-						width           : 100%;
-						height          : 2px;
-						background-color: rgb(32, 32, 32);
-						margin-bottom   : 4px;
-						transition      : all 0.5s;
-					}
-
-					.active-btn {
-						margin-bottom: 8px;
-					}
-
-					body > header > nav > div > button > span:last-of-type {
-						margin-bottom: 0px;
-					}
+		body > header > nav > div > button {
+			margin-right: 180px;
+		}
 
 		body > header > main {
-			width         : 40%;
-			border-left   : 1px solid rgb(0, 0, 0);
-			padding-left  : 16px; 
-			padding-top   : 8px;
-			padding-bottom: 8px;
-			margin-left   : 200px;
-			z-index       : 20;
+			margin-left: 150px;
 		}
 
 			body > header > main > h1 {
-				text-transform: uppercase;
-				font-size     : 2.5em;
-				white-space   : pre-line;
-				margin-bottom : 28px;
+				font-size: 2em;
 			}
 
-				body > header > main > h1 > strong {
-					font-weight: 400;
+			body > header > main > h2 {
+				font-size: 1.25em;
+			}
+}
+
+@media all and (orientation: landscape) and (max-width: 1030px) {
+	body > button {
+		display: block;
+	}
+
+	body > nav {
+		width      : 35%;
+		height     : 100vh;
+		margin-top : 0px;
+		margin-left: -35%;
+	}
+
+	.active-resp-nav {
+		margin-left: 0%;
+	}
+
+		body > nav > section {
+			width          : 100%;
+			display        : flex;
+			align-items    : center;
+			justify-content: center;
+		}
+
+		body > nav > section:first-of-type {
+			height   : 15%;
+			transform: skewX(0deg);
+		}
+
+			body > nav > section:first-of-type > a {
+				display  : inline-block;
+				height   : auto;
+				transform: skewX(0deg);
+			}
+
+				body > nav > section:first-of-type > a > img {
+					display  : block;
+					max-width: 100%;
+					height   : auto;
 				}
+
+		body > nav > section:last-of-type {
+			height: 85%;
+		}
+
+			body > nav > section:last-of-type > ul {
+				list-style     : none;
+				display        : flex;
+				align-items    : center;
+				justify-content: center;
+				flex-direction : column;
+			}
+
+				body > nav > section:last-of-type > ul > li {
+					margin-right: 0px;
+					margin-bottom: 32px;
+				}
+
+				body > nav > section:last-of-type > ul > li:last-of-type {
+					margin-bottom: 0px;
+				}
+
+	body > menu {
+		display: none;
+	}
+
+	body > header {
+		background-image: none;
+		display        : flex;
+		align-items    : center;
+		justify-content: center;
+		flex-direction : column;
+	}
+
+		body > header > nav {
+			height: 150px;
+		}
+
+			body > header > nav > div {
+				width: 100%;
+				height: 100%;
+			}
+
+				body > header > nav > div > img {
+					display   : block;
+					height    : 120px;
+					margin    : auto;
+					margin-top: 30px;
+				}
+
+				body > header > nav > div > button {
+					display: none;
+				}
+
+		body > header > main {
+			width          : 100%;
+			padding-left   : 16px;
+			padding-top    : 0px;
+			padding-bottom : 0px;
+			margin-left    : 0px;
+			display        : flex;
+			flex-direction : column;
+			justify-content: center;
+			align-items    : center;
+			border-left    : none;
+		}
+
+			body > header > main > h1 {
+				font-size: 2.5em;
+			}
 
 			body > header > main > h2 {
 				font-size: 1.5em;
-				position : relative;
 			}
 
-				body > header > main > h2 > span {
-					display: block;
-					width  : 100%;
+		body > section:first-of-type > div {
+			width: 90%;
+		}
+
+				body > section:first-of-type > div > section > h3 {
+					font-size: 1.75em;
 				}
 
-				body > header > main > h2 > span:last-of-type {
-					padding-left: 300px;
-					font-size: 1.25em;
-					font-style: italic;
+		body > section:nth-of-type(3) > header {
+			width: 90%;
+		}
+
+		body > section:nth-of-type(5) > img {
+			display: none;
+		}
+
+		body > section:nth-of-type(5) > section {
+			width: 90%;
+		}
+
+			body > section:nth-of-type(5) > section > div {
+				padding-right: 24px;
+			}
+}
+
+@media all and (orientation: landscape) and (max-width: 740px) {
+		body > header > nav {
+			display: none;
+		}
+
+		body > header > main {
+			width          : 100%;
+			padding-left   : 16px;
+			padding-top    : 0px;
+			padding-bottom : 0px;
+			margin-left    : 0px;
+			display        : flex;
+			flex-direction : column;
+			justify-content: center;
+			align-items    : center;
+			border-left    : none;
+		}
+
+			body > header > main > h1 {
+				font-size: 2.5em;
+			}
+
+			body > header > main > h2 {
+				font-size: 1.5em;
+			}
+
+		body > section:first-of-type > div {
+			width: 90%;
+		}
+
+			body > section:first-of-type > div > section {
+				padding-left: 24px;
+			}
+
+				body > section:first-of-type > div > section > h3 {
+					font-size: 1.5em;
 				}
+
+		body > section:nth-of-type(3) > header {
+			width: 90%;
+		}
+
+			body > section:nth-of-type(3) > section > div:first-of-type  {
+				width: 100%;
+				padding-right: 0px;
+			}
+
+			body > section:nth-of-type(3) > section > div:last-of-type > figure {
+				display: none;
+			}
+
+		body > section:nth-of-type(5) > img {
+			display: none;
+		}
+
+		body > section:nth-of-type(5) > section {
+			width: 90%;
+		}
+
+			body > section:nth-of-type(5) > section > div {
+				padding-right: 24px;
+			}
+
+		body > footer > section > div {
+			width: 50%;
+		}
+
+		body > footer > section > div:last-of-type {
+			display: none;
+		}
+}
+
+@media all and (orientation: portrait) and (max-width: 770px) {
+	body > button {
+		display: block;
+	}
+
+	.active-resp-nav {
+		margin-left: 0%;
+	}
+
+	body > nav {
+		width      : 50%;
+		height     : 100vh;
+		margin-top : 0px;
+		margin-left: -50%;
+	}
+
+		body > nav > section {
+			width          : 100%;
+			display        : flex;
+			align-items    : center;
+			justify-content: center;
+		}
+
+		body > nav > section:first-of-type {
+			height   : 15%;
+			transform: skewX(0deg);
+		}
+
+			body > nav > section:first-of-type > a {
+				display  : inline-block;
+				height   : auto;
+				transform: skewX(0deg);
+			}
+
+				body > nav > section:first-of-type > a > img {
+					display  : block;
+					max-width: 100%;
+					height   : auto;
+				}
+
+		body > nav > section:last-of-type {
+			height: 85%;
+		}
+
+			body > nav > section:last-of-type > ul {
+				list-style     : none;
+				display        : flex;
+				align-items    : center;
+				justify-content: center;
+				flex-direction : column;
+			}
+
+				body > nav > section:last-of-type > ul > li {
+					margin-right: 0px;
+					margin-bottom: 32px;
+				}
+
+				body > nav > section:last-of-type > ul > li:last-of-type {
+					margin-bottom: 0px;
+				}
+
+	body > menu {
+		display: none;
+	}
+
+	body > header {
+		background-image: none;
+		display        : flex;
+		align-items    : center;
+		justify-content: center;
+		flex-direction : column;
+	}
+
+		body > header > nav {
+			height: 150px;
+		}
+
+			body > header > nav > div {
+				width: 100%;
+				height: 100%;
+			}
+
+				body > header > nav > div > img {
+					display   : block;
+					height    : 120px;
+					margin    : auto;
+					margin-top: 30px;
+				}
+
+				body > header > nav > div > button {
+					display: none;
+				}
+
+		body > header > main {
+			width          : 100%;
+			padding-left   : 16px;
+			padding-top    : 0px;
+			padding-bottom : 0px;
+			margin-left    : 0px;
+			display        : flex;
+			flex-direction : column;
+			justify-content: center;
+			align-items    : center;
+			border-left    : none;
+		}
+
+			body > header > main > h1 {
+				font-size: 2.5em;
+			}
+
+			body > header > main > h2 {
+				font-size: 1.5em;
+			}
 
 	body > section:first-of-type {
 		width  : 100%;
@@ -833,431 +1105,179 @@ img {
 	}
 
 		body > section:first-of-type > div {
-			width          : 80%;
-			margin         : auto;
-			display        : flex;
-			flex-flow      : row wrap;
-			justify-content: space-between;
-			align-items    : center;
+			width: 90%;
 		}
 
 			body > section:first-of-type > div > figure {
-				width: 60%;
+				width: 100%;
 			}
 
-				body > section:first-of-type > div > figure > img {
-					display      : block;
-					width        : 100%;
-					margin-bottom: 16px;
-				}
-
-				body > section:first-of-type > div > figure > figcaption {
-					font-size: 0.85em;
-				}
-
 			body > section:first-of-type > div > section {
-				width       : 40%;
-				padding-left: 48px;
+				width       : 100%;
+				padding-left: 0px;
+				margin-top  : 32px;
 			}
 
 				body > section:first-of-type > div > section > h3 {
-					font-size     : 2em;
-					font-weight   : 400;
-					text-transform: uppercase;
-					color         : rgb(67, 82, 164);
-					margin-bottom : 24px;
+					font-size: 1.75em;
 				}
-
-				body > section:first-of-type > div > section > div {
-					width        : 100%;
-					margin-bottom: 24px;
-				}
-
-				body > section:first-of-type > div > section > div:last-of-type {
-					display: none;
-				}
-
-					body > section:first-of-type > div > section > div > p:first-of-type {
-						margin-bottom: 24px;
-					}
-
-				body > section:first-of-type > div > section > footer {
-					width          : 100%;
-					display        : flex;
-					flex-flow      : row wrap;
-					justify-content: space-between;
-					align-items    : center;
-				}
-
-						body > section:first-of-type > div > section > footer > div > button {
-							background-color: rgb(204, 204, 204);
-							border          : none;
-							width           : 16px;
-							height          : 16px;
-							border-radius   : 50%;
-							cursor          : pointer;
-							transition      : all 0.3s ease-out;
-						}
-
-						body > section:first-of-type > div > section > footer > div > button:hover {
-							background-color: rgba(67, 82, 164, 0.5);
-						}
-
-						body > section:first-of-type > div > section > footer > div > button:first-of-type {
-							margin-right: 4px;
-						}
-
-						.about-active-button {
-							background-color: rgb(67, 82, 164) !important;
-						}
-
-					body > section:first-of-type > div > section > footer > button {
-						background-color: transparent;
-						border          : 1px solid rgb(67, 82, 164);
-						padding         : 4px 8px;
-						font-size       : 0.85em;
-						text-transform  : uppercase;
-						font-weight     : 400;
-						text-transform  : uppercase;
-						color           : rgb(67, 82, 164);
-						cursor          : pointer;
-					}
-
-	body > section:nth-of-type(2) {
-		width: 100%;
-	}
-
-		body > section:nth-of-type(2) > header {
-			width           : 100%;
-			background-color: rgb(255, 255, 255);
-			display         : flex;
-			align-items     : center;
-			justify-content : center;
-			padding         : 24px 0px;
-			border-top      : 1px solid rgb(0, 0, 0);
-			border-bottom   : 1px solid rgb(0, 0, 0);
-		}
-
-			body > section:nth-of-type(2) > header > h3 {
-				font-size     : 1.5em;
-				text-transform: uppercase;
-				white-space   : pre-line;
-				text-align    : center;
-			}
-
-				body > section:nth-of-type(2) > header > h3 > strong {
-					font-size: 1.5em;
-				}
-
-		body > section:nth-of-type(2) > img {
-			display: block;
-			width  : 100%;
-		}
-
-		body > section:nth-of-type(2) > footer {
-			width          : 100%;
-			display        : flex;
-			align-items    : center;
-			justify-content: center;
-			padding        : 24px 0px;
-			border-top     : 1px solid rgb(0, 0, 0);
-			border-bottom  : 1px solid rgb(0, 0, 0);
-		}
-
-	body > section:nth-of-type(3) {
-		width     : 100%;
-		padding   : 90px 0px;
-		transition: all 0.3s ease-out;
-	}
 
 		body > section:nth-of-type(3) > header {
-			width        : 80%;
-			margin       : auto;
-			margin-bottom: 90px;
-			text-align   : center;
+			width: 90%;
 		}
 
 			body > section:nth-of-type(3) > header > h3 {
-				font-size     : 2em;
-				font-weight   : 400;
-				text-transform: uppercase;
-				color         : rgb(67, 82, 164);
-				margin-bottom : 24px;
-			}
-
-			body > section:nth-of-type(3) > header > sub {
-				font-size: 1.5em;
+				font-size: 1.75em;
 			}
 
 		body > section:nth-of-type(3) > section {
-			width          : 80%;
-			margin         : auto;
-			display        : flex;
-			flex-flow      : row wrap;
-			justify-content: space-between;
+			width: 90%;
 		}
 
 			body > section:nth-of-type(3) > section > div:first-of-type {
-				width        : 40%;
-				padding-right: 64px; 
+				width        : 100%;
+				padding-right: 0px; 
 			}
-
-				body > section:nth-of-type(3) > section > div:first-of-type > menu {
-					width          : 100%;
-					display        : flex;
-					align-items    : center;
-					justify-content: center;
-					border-bottom  : 2px solid rgb(251, 175, 41);
-					margin-bottom  : 36px;
-				}
-
-					body > section:nth-of-type(3) > section > div:first-of-type > menu > a {
-						display        : inline-block;
-						width          : 25%;
-						text-align     : center;
-						padding        : 16px 0px;
-						font-weight    : 400;
-						font-size      : 0.75em;
-						text-decoration: none;
-						color          : rgb(0, 0, 0);
-						transition     : all 0.3s ease-out;
-					}
-
-					body > section:nth-of-type(3) > section > div:first-of-type > menu > a:hover {
-						background-color: rgba(251, 175, 41, 0.5);
-					}
-
-					.service-btn-active {
-						background-color: rgb(251, 175, 41);
-					}
-
-				body > section:nth-of-type(3) > section > div:first-of-type > div {
-					width  : 100%;
-					display: none;
-				}
-
-					body > section:nth-of-type(3) > section > div:first-of-type > div > h4 {
-						font-size     : 1.25em;
-						text-transform: uppercase;
-						font-weight   : 400;
-						margin-bottom : 24px;
-					}
-
-					body > section:nth-of-type(3) > section > div:first-of-type > div > p {
-						margin-bottom: 24px;
-					}
-
-					body > section:nth-of-type(3) > section > div:first-of-type > div > p:last-of-type {
-						margin-bottom: 0px;
-					}
-
-						body > section:nth-of-type(3) > section > div:first-of-type > div > p > strong {
-							font-weight: 400;
-						}
-
-					body > section:nth-of-type(3) > section > div:first-of-type > div:nth-of-type(2) {
-						display: initial;
-					}
-
-						body > section:nth-of-type(3) > section > div:first-of-type > div:nth-of-type(2) > p {
-							white-space: pre-line;
-						}
 
 			body > section:nth-of-type(3) > section > div:last-of-type {
-				width: 60%;
+				width: 100%;
+				margin-top: 32px;
 			}
-
-				body > section:nth-of-type(3) > section > div:last-of-type > figure {
-					width          : 100%;
-					display        : flex;
-					justify-content: flex-end;
-					align-items    : flex-end;
-				}
-
-					body > section:nth-of-type(3) > section > div:last-of-type > figure > blockquote {
-						width      : 50%;
-						font-size  : 0.85em;
-						white-space: pre-line;
-						margin-left: 32px;
-					}
-
-				body > section:nth-of-type(3) > section > div:last-of-type > img {
-					display: none;
-					width  : 100%;
-				}
-
-				body > section:nth-of-type(3) > section > div:last-of-type > blockquote {
-					display   : none;
-					font-size : 0.85em;
-					margin-top: 12px;
-				}
-
-	body > section:nth-of-type(4) {
-		width                : 100%;
-		padding              : 120px 0px;
-		background-image     : url('../images/extras/figure-1.jpg');
-		background-repeat    : no-repeat;
-		background-size      : cover;
-		background-attachment: fixed;
-		text-align           : center;
-	}
 
 		body > section:nth-of-type(4) > h3 {
-			font-size     : 2em;
-			color         : rgb(255, 255, 255);
-			text-transform: uppercase;
-			white-space   : pre-line;
+			font-size: 1.75em;
 		}
 
-			body > section:nth-of-type(4) > h3 > strong {
-				font-weight: 400;
-			}
-
-	body > section:nth-of-type(5) {
-		width   : 100%;
-		padding : 90px 0px;
-		position: relative;
-	}
-
 		body > section:nth-of-type(5) > img {
-			position: absolute;
-			width   : 120px;
-			top     : 0;
-			left    : 0;
+			display: none;
 		}
 
 		body > section:nth-of-type(5) > section {
-			width          : 80%;
-			margin         : auto;
-			display        : flex;
-			flex-flow      : row wrap;
-			justify-content: space-between;
-			align-items    : center;
+			width: 90%;
 		}
 
 			body > section:nth-of-type(5) > section > div {
 				width        : 70%;
-				padding-right: 64px;
+				padding-right: 24px;
 			}
 
 				body > section:nth-of-type(5) > section > div > h3 {
-					font-size     : 2em;
-					font-weight   : 400;
-					text-transform: uppercase;
-					color         : rgb(67, 82, 164);
-					margin-bottom : 24px;
+					font-size: 1.75em;
 				}
-
-				body > section:nth-of-type(5) > section > div > p {
-					margin-bottom: 24px;
-				}
-
-				body > section:nth-of-type(5) > section > div > p:first-of-type,
-				body > section:nth-of-type(5) > section > div > p:last-of-type {
-					font-style: italic;
-				}
-
-				body > section:nth-of-type(5) > section > div > button {
-					cursor          : pointer;
-					background-color: transparent;
-					border          : 1px solid rgb(67, 82, 164);
-					color           : rgb(67, 82, 164);
-					padding         : 6px 12px;
-					font-weight     : 400;
-					text-transform  : uppercase;
-					font-size       : 0.85em;
-				}
-
-			body > section:nth-of-type(5) > section > img {
-				display: block;
-				width  : 30%;
-			}
-
-	body > section:nth-of-type(6) {
-		width                : 100%;
-		padding              : 120px 0px;
-		text-align           : center;
-		background-image     : url('../images/extras/figure-2.jpg');
-		background-size      : cover;
-		background-position  : center;
-		background-repeat    : no-repeat;
-		background-attachment: fixed;
-	}
-
-		body > section:nth-of-type(6) > h3 {
-			color         : rgb(255, 255, 255);
-			font-size     : 1.5em;
-			text-transform: uppercase;
-			white-space   : pre-line;
-		}
-
-			body > section:nth-of-type(6) > h3 > strong {
-				font-size  : 1.5em;
-				font-weight: 400;
-			}
-
-	body > footer {
-		width: 100%;
-	}
 
 		body > footer > section {
-			width          : 80%;
-			margin         : 90px auto;
-			display        : flex;
-			flex-flow      : row wrap;
-			justify-content: space-between;
-			align-items    : center;
+			width: 90%;
 		}
 
 			body > footer > section > div {
-				width: 33.33%;
+				width: 50%;
 			}
 
-				body > footer > section > div:nth-of-type(1) > h3 {
-					font-weight   : 400;
-					font-size     : 1.5em;
-					text-transform: uppercase;
-					margin-bottom : 24px;
+			body > footer > section > div:nth-of-type(2) > img {
+				display: block;
+				width: 180px;
+			}
+
+			body > footer > section > div:last-of-type {
+				display: none;
+			}
+}
+
+@media all and (orientation: portrait) and (max-width: 440px) {
+	body > nav {
+		width      : 75%;
+		margin-left: -75%;
+	}
+
+	body > header > main {
+		padding-left: 0px;
+	}
+
+		body > header > main > h1 {
+			font-size: 1.75em;
+		}
+
+		body > header > main > h2 {
+			font-size: 1.1em;
+		}
+
+			body > header > main > h2 > span:last-of-type {
+				padding-left: 200px
+			}
+
+		body > section:nth-of-type(2) > header > h3 {
+			font-size: 1.1em;
+		}
+
+		body > section:nth-of-type(2) > footer > p {
+			width     : 100%;
+			text-align: center;
+		}
+
+		body > section:nth-of-type(3) > header {
+			width: 90%;
+		}
+
+			body > section:nth-of-type(3) > header > h3 {
+				font-size: 1.75em;
+			}
+
+		body > section:nth-of-type(3) > section {
+			width: 90%;
+		}
+
+			body > section:nth-of-type(3) > section > div:first-of-type {
+				width        : 100%;
+				padding-right: 0px; 
+			}
+
+			body > section:nth-of-type(3) > section > div:last-of-type {
+				display: none;
+			}
+
+		body > section:nth-of-type(4) > h3 {
+			font-size: 1.5em;
+		}
+
+		body > section:nth-of-type(5) > img {
+			display: none;
+		}
+
+		body > section:nth-of-type(5) > section {
+			width: 90%;
+		}
+
+			body > section:nth-of-type(5) > section > img {
+				display: none;
+			}
+
+			body > section:nth-of-type(5) > section > div {
+				width        : 100%;
+				padding-right: 0px;
+			}
+
+				body > section:nth-of-type(5) > section > div > h3 {
+					font-size: 1.5em;
 				}
 
-				body > footer > section > div:nth-of-type(1) > ul {
-					list-style: none;
-					font-size : 0.85em;
-				}
+		body > footer > section {
+			width: 90%;
+		}
 
-					body > footer > section > div:nth-of-type(1) > ul > li:nth-of-type(1) {
-						margin-bottom: 16px
-					}
+			body > footer > section > div {
+				width: 100%;
+			}
 
-					body > footer > section > div:nth-of-type(1) > ul > li:nth-of-type(3) {
-						margin-bottom: 16px
-					}
-
-					body > footer > section > div:nth-of-type(1) > ul > li:nth-of-type(5) {
-						margin-bottom: 16px
-					}
-						body > footer > section > div:nth-of-type(1) > ul > li > a {
-							text-decoration: none;
-							font-weight    : 400;
-							color          : rgb(0, 0, 0);
-						}
-
-			body > footer > section > div:nth-of-type(2) {
+			body > footer > section > div:nth-of-type(1) {
 				display        : flex;
 				align-items    : center;
 				justify-content: center;
+				flex-direction : column;
+				margin-bottom  : 64px;
 			}
 
-		body > footer > footer {
-			width           : 100%;
-			text-align      : center;
-			padding         : 16px 0px;
-			background-color: rgb(253, 182, 23);
-			font-size       : 0.85em;
-			text-transform  : uppercase;
-		}
-
-			body > footer > footer > strong {
-				font-weight: 400;
+			body > footer > section > div:nth-of-type(2) > img {
+				display: block;
+				width: 180px;
 			}
 }
