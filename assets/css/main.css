@@ -210,7 +210,7 @@ img {
 
 		body > header > nav {
 			width          : 100%;
-			height         : 300px;
+			height         : 250px;
 			margin         : auto;
 			position       : absolute;
 			display        : flex;
@@ -227,6 +227,11 @@ img {
 				flex-flow      : row wrap;
 				justify-content: space-between;
 			}
+
+				body > header > nav > div > img {
+					display : block;
+					height  : 200px;
+				}
 
 				body > header > nav > div > button {
 					width           : 32px;
@@ -285,9 +290,8 @@ img {
 				}
 
 				body > header > main > h2 > span:last-of-type {
-					padding-left: 300px;
 					font-size: 1.25em;
-					font-style: italic;
+					text-transform: uppercase;
 				}
 
 	body > section:first-of-type {
@@ -339,6 +343,10 @@ img {
 				body > section:first-of-type > div > section > div:last-of-type {
 					display: none;
 				}
+
+					body > section:first-of-type > div > section > div > p {
+						text-align: justify;
+					}
 
 					body > section:first-of-type > div > section > div > p:first-of-type {
 						margin-bottom: 24px;
@@ -516,6 +524,7 @@ img {
 
 					body > section:nth-of-type(3) > section > div:first-of-type > div > p {
 						margin-bottom: 24px;
+						text-align: justify;
 					}
 
 					body > section:nth-of-type(3) > section > div:first-of-type > div > p:last-of-type {
@@ -532,6 +541,14 @@ img {
 
 						body > section:nth-of-type(3) > section > div:first-of-type > div:nth-of-type(2) > p {
 							white-space: pre-line;
+						}
+
+						body > section:nth-of-type(3) > section > div:first-of-type > div:nth-of-type(3) > p {
+							text-align : justify;
+						}
+
+						body > section:nth-of-type(3) > section > div:first-of-type > div:nth-of-type(4) > p {
+							text-align: justify;
 						}
 
 			body > section:nth-of-type(3) > section > div:last-of-type {
@@ -621,6 +638,10 @@ img {
 
 				body > section:nth-of-type(5) > section > div > p {
 					margin-bottom: 24px;
+				}
+
+				body > section:nth-of-type(5) > section > div > p:nth-of-type(2) {
+					text-align: justify;
 				}
 
 				body > section:nth-of-type(5) > section > div > p:first-of-type,
@@ -731,51 +752,200 @@ img {
 			padding         : 16px 0px;
 			background-color: rgb(253, 182, 23);
 			font-size       : 0.85em;
-			text-transform  : uppercase;
 		}
 
 			body > footer > footer > strong {
 				font-weight: 400;
 			}
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1707px) {
 	body > menu > div > ul {
-		list-style  : none;
-		position    : absolute;
-		right       : 0;
-		margin-right: 180px;
-		margin-top  : -140px;
-		z-index     : 1000
+		margin-right: 200px;
 	}
 
-		body > menu > div > ul > li > a {
-			font-size: 2em;
+	body > header > nav > div > button {
+		margin-right: 240px;
+	}
+}
+
+@media screen and (max-width: 1440px) {
+	body > menu > div {
+		width: 85%;
+	}
+
+		body > menu > div > ul {
+			margin-right: 130px;
 		}
 
 	body > header > nav {
 		height: 200px;
 	}
 
-		body > header > nav > div > img {
-			display: block;
-			height : 150px;
+		body > header > nav > div {
+			width: 85%;
 		}
 
-		body > header > nav > div > button {
-			margin-right: 180px;
+			body > header > nav > div > img {
+				display : block;
+				height  : 160px;
+			}
+
+			body > header > nav > div > button {
+				margin-right: 230px;
+			}
+
+	body > header > main {
+		margin-left: 130px;
+	}
+
+	body > section:first-of-type > div {
+		width: 85%;
+	}
+
+		body > section:first-of-type > div > section > div > p {
+			white-space: pre-line;
+			text-align: left;
 		}
 
-		body > header > main {
-			margin-left: 150px;
+	body > section:nth-of-type(3) > header {
+		width: 85%;
+	}
+
+	body > section:nth-of-type(3) > section {
+		width: 85%;
+	}
+
+		body > section:nth-of-type(3) > section > div:first-of-type {
+			padding-right: 32px;
 		}
 
-			body > header > main > h1 {
+			body > section:nth-of-type(3) > section > div:first-of-type > div:nth-of-type(1) > p {
+				text-align: left;
+			}
+
+			body > section:nth-of-type(3) > section > div:first-of-type > div:nth-of-type(2) > p {
+				text-align: left;
+			}
+
+			body > section:nth-of-type(3) > section > div:first-of-type > div:nth-of-type(3) > p {
+				white-space: pre-line;
+				text-align : left;
+			}
+
+			body > section:nth-of-type(3) > section > div:first-of-type > div:nth-of-type(4) > p {
+				text-align: left;
+			}
+
+	body > section:nth-of-type(5) > img {
+		width: 75px;
+	}
+
+	body > section:nth-of-type(5) > section {
+		width: 85%;
+	}
+
+		body > section:nth-of-type(5) > section > div > p:nth-of-type(2) {
+			white-space: pre-line;
+			text-align : left;
+		}
+
+	body > footer > section {
+		width: 85%;
+	}
+}
+
+@media screen and (max-width: 1280px) {
+	body > menu > div {
+		width: 90%;
+	}
+
+		body > menu > div > ul > li {
+			margin-bottom: 12px;
+		}
+
+			body > menu > div > ul > li > a {
 				font-size: 2em;
 			}
 
-			body > header > main > h2 {
-				font-size: 1.25em;
+				body > menu > div > ul > li > a > img {
+					height: 0.75em;
+				}
+
+	body > header > nav {
+		height: 180px;
+	}
+
+		body > header > nav > div {
+			width: 90%;
+		}
+
+			body > header > nav > div > img {
+				display : block;
+				height  : 140px;
 			}
+
+			body > header > nav > div > button {
+				margin-right: 240px;
+			}
+
+	body > header > main {
+		margin-left: 80px;
+	}
+
+	body > section:first-of-type > div {
+		width: 90%;
+	}
+
+		body > section:first-of-type > div > section > div > p {
+			white-space: normal;
+			text-align: justify;
+		}
+
+	body > section:nth-of-type(3) > header {
+		width: 90%;
+	}
+
+	body > section:nth-of-type(3) > section {
+		width: 90%;
+	}
+
+		body > section:nth-of-type(3) > section > div:first-of-type > div:nth-of-type(1) > p {
+			text-align: justify;
+		}
+
+		body > section:nth-of-type(3) > section > div:first-of-type > div:nth-of-type(2) > p {
+			text-align: justify;
+		}
+
+		body > section:nth-of-type(3) > section > div:first-of-type > div:nth-of-type(3) > p {
+			white-space: normal;
+			text-align : justify;
+		}
+
+		body > section:nth-of-type(3) > section > div:first-of-type > div:nth-of-type(4) > p {
+			text-align: justify;
+		}
+
+		body > section:nth-of-type(3) > section > div:first-of-type {
+			padding-right: 32px;
+		}
+
+	body > section:nth-of-type(5) > img {
+		width: 75px;
+	}
+
+	body > section:nth-of-type(5) > section {
+		width: 90%;
+	}
+
+		body > section:nth-of-type(5) > section > div > p:nth-of-type(2) {
+			white-space: normal;
+			text-align: justify;
+		}
+
+	body > footer > section {
+		width: 90%;
+	}
 }
 
 @media all and (orientation: landscape) and (max-width: 1030px) {
@@ -889,7 +1059,8 @@ img {
 			}
 
 			body > header > main > h2 {
-				font-size: 1.5em;
+				font-size  : 1.5em;
+				margin-left: -130px;
 			}
 
 		body > section:first-of-type > div {
@@ -1101,6 +1272,7 @@ img {
 
 			body > header > main > h2 {
 				font-size: 1.5em;
+				margin-left: -130px;
 			}
 
 	body > section:first-of-type {
@@ -1203,11 +1375,8 @@ img {
 
 		body > header > main > h2 {
 			font-size: 1.1em;
+			margin-left: -90px;
 		}
-
-			body > header > main > h2 > span:last-of-type {
-				padding-left: 200px
-			}
 
 		body > section:nth-of-type(2) > header > h3 {
 			font-size: 1.1em;
